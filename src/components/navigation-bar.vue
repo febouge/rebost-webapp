@@ -2,7 +2,6 @@
   <v-navigation-drawer
   :clipped="$vuetify.breakpoint.lgAndUp"
   :value="drawer"
-  color="primary"
   dark
   fixed
   app

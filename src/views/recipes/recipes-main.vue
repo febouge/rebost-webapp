@@ -1,27 +1,19 @@
 <template>
-  <div>
-    <h1>Recipes</h1>
-    <v-btn @click="findRecipes">Load</v-btn>
-    <v-data-table
-    :headers="headers"
-    :items="recipes"
-    class="elevation-1"
-    >
-      <template slot="items" slot-scope="props">
-        <td class="text-xs">{{ props.item.name }}</td>
-        <td class="text-xs">{{ props.item.recipeIngredients.length }}</td>
-        <td class="text-xs">
-          <v-chip v-for="tag of props.item.tags"
-          :key="tag.id" :small="true">
-          {{ tag.name }}
-          </v-chip>
-        </td>
-      </template>
-      <template slot="no-data">
-          Sorry, nothing to display here :(
-      </template>
-    </v-data-table>
-  </div>
+<div>
+  <h1>Recipes</h1>
+  <v-btn @click="findRecipes">Load</v-btn>
+  <v-container v-bind="{ [`grid-list-xl`]: true }" fluid>
+    <v-layout row wrap>
+      <v-flex
+        v-for="recipe in recipes"
+        :key="recipe.id"
+        xs12 sm5 md4 lg2
+        >
+        <recipe-card v-bind:recipe="recipe"></recipe-card>
+      </v-flex>
+    </v-layout>
+  </v-container>
+</div>
 </template>
 
 <script lang="ts">
@@ -32,9 +24,13 @@ import {
   RECIPES_MODULE,
   RECIPES_FIND,
 } from '@/store/constants/recipes';
+import RecipeCard from '@/components/recipes/RecipeCard.vue';
 
 @Component({
   name: 'recipes-main',
+  components: {
+    RecipeCard,
+  },
 })
 export default class RecipesMain extends Vue {
 

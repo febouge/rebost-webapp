@@ -2,7 +2,7 @@
   <v-toolbar
   :clipped-left="$vuetify.breakpoint.lgAndUp"
   app
-  dark
+  color="secondary"
   fixed>
     <v-toolbar-side-icon @click.stop="toggleDrawer"></v-toolbar-side-icon>
     <v-toolbar-title class="ml-0 pl-3">

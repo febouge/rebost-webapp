@@ -6,7 +6,7 @@
   fixed>
     <v-toolbar-side-icon @click.stop="toggleDrawer"></v-toolbar-side-icon>
     <v-toolbar-title class="ml-0 pl-3">
-      <span class="hidden-sm-and-down">Rebost</span>
+      <span class="hidden-sm-and-down">{{ $t('title')}}</span>
     </v-toolbar-title>
     <v-spacer></v-spacer>
     <v-btn icon>

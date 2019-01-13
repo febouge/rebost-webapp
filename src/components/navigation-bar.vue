@@ -17,7 +17,7 @@
       </v-list-tile-action>
       <v-list-tile-content>
         <v-list-tile-title class="grey--text">
-          {{ item.text }}
+          {{ $t(item.text) }}
         </v-list-tile-title>
       </v-list-tile-content>
     </v-list-tile>
@@ -42,12 +42,12 @@ export default class NavigationBar extends Vue {
 
   public drawerItems: DrawerItem[] = [
     {
-      text: 'Home',
+      text: 'navigation.home',
       path: '/',
       icon: 'home',
     },
     {
-      text: 'Recipes',
+      text: 'navigation.recipes',
       path: '/recipes',
       icon: 'book',
     },

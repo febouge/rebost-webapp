@@ -1,4 +1,4 @@
-# rebost-webapp
+# Rebost (webapp)
 
 ## Project setup
 ```

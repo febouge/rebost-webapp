@@ -1,13 +1,13 @@
 <template>
 <div>
-  <h1>Recipes</h1>
+  <h2>{{ $t('navigation.recipes')}}</h2>
   <v-btn @click="findRecipes">Load</v-btn>
   <v-container v-bind="{ [`grid-list-xl`]: true }" fluid>
     <v-layout row wrap>
       <v-flex
         v-for="recipe in recipes"
         :key="recipe.id"
-        xs12 sm5 md4 lg2
+        xs12 sm6 md3 lg2
         >
         <recipe-card v-bind:recipe="recipe"></recipe-card>
       </v-flex>
@@ -24,7 +24,7 @@ import {
   RECIPES_MODULE,
   RECIPES_FIND,
 } from '@/store/constants/recipes';
-import RecipeCard from '@/components/recipes/RecipeCard.vue';
+import RecipeCard from '@/components/recipes/recipe-card.vue';
 
 @Component({
   name: 'recipes-main',

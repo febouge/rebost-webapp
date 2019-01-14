@@ -51,6 +51,11 @@ export default class NavigationBar extends Vue {
       path: '/recipes',
       icon: 'book',
     },
+    {
+      text: 'navigation.tags',
+      path: '/tags',
+      icon: 'bookmark',
+    },
   ];
 
   public navigateTo(path: string): void {

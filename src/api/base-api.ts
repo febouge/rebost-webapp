@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { AxiosInstance, AxiosRequestConfig, AxiosPromise } from 'axios';
+import { AxiosInstance, AxiosPromise } from 'axios';
 
 export default class BaseApi {
 

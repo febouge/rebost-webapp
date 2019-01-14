@@ -1,3 +1,5 @@
+import { Recipe } from '@/api/interfaces/recipe';
+
 export interface RecipeState {
-  recipes: any[];
+  recipes: Recipe[];
 }

@@ -39,15 +39,5 @@ export default class RecipesMain extends Vue {
 
   @Action(RECIPES_FIND, {namespace: RECIPES_MODULE})
   public findRecipes!: () => Promise<void>;
-
-  public headers = [
-    { text: 'Name', value: 'name' },
-    { text: 'Ingredients', value: 'ingredients' },
-    { text: 'Tags', value: 'tags' },
-  ];
-
-  public mount() {
-    this.findRecipes();
-  }
 }
 </script>

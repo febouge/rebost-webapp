@@ -12,27 +12,27 @@ export default class BaseApi {
     },
   });
 
-  public get<T = any>(url: string): AxiosPromise<T> {
+  protected get<T = any>(url: string): AxiosPromise<T> {
     return this.axiosInstance.get(url);
   }
 
-  public delete(url: string): AxiosPromise {
+  protected delete(url: string): AxiosPromise {
     return this.axiosInstance.delete(url);
   }
 
-  public head(url: string): AxiosPromise {
+  protected head(url: string): AxiosPromise {
     return this.axiosInstance.head(url);
   }
 
-  public post<T = any>(url: string, data?: any): AxiosPromise<T> {
+  protected post<T = any>(url: string, data?: any): AxiosPromise<T> {
     return this.axiosInstance.post(url, data);
   }
 
-  public put<T = any>(url: string, data?: any): AxiosPromise<T> {
+  protected put<T = any>(url: string, data?: any): AxiosPromise<T> {
     return this.axiosInstance.put(url, data);
   }
 
-  public patch<T = any>(url: string, data?: any): AxiosPromise<T> {
+  protected patch<T = any>(url: string, data?: any): AxiosPromise<T> {
     return this.axiosInstance.patch(url, data);
   }
 }

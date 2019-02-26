@@ -10,4 +10,8 @@ export const enMessages = {
     save: 'Save',
     delete: 'Delete',
   },
+  tags: {
+    title: 'Tags',
+    addTag: 'Add tag',
+  },
 };

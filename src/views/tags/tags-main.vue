@@ -73,7 +73,6 @@ export default class TagsMain extends Vue {
 
   public newTag() {
     this.createTag({
-      id: null,
       name: this.addTagText,
     });
     this.addTagText = '';

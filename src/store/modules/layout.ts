@@ -1,10 +1,8 @@
-import {ActionTree, GetterTree, Module, MutationTree} from 'vuex';
+import { ActionTree, GetterTree, Module, MutationTree } from 'vuex';
 import { LayoutState } from '@/store/types/layout-state';
 import { RootState } from '@/store/types/root-state';
 import { Vue } from 'vue-property-decorator';
-import {
-  TOGGLE_DRAWER,
-} from '@/store/constants/layout';
+import { TOGGLE_DRAWER } from '@/store/constants/layout';
 
 const layoutState: LayoutState = {
   showDrawer: true,
@@ -19,7 +17,7 @@ const layoutMutations: MutationTree<LayoutState> = {
 };
 
 const layoutActions: ActionTree<LayoutState, RootState> = {
-  [TOGGLE_DRAWER]: ({commit}) => {
+  [TOGGLE_DRAWER]: ({ commit }) => {
     commit(TOGGLE_DRAWER);
   },
 };

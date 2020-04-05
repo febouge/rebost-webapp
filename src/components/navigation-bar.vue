@@ -1,29 +1,22 @@
 <template>
-  <v-navigation-drawer
-  :clipped="$vuetify.breakpoint.lgAndUp"
+<v-navigation-drawer
   :value="drawer"
+  clipped
   dark
-  fixed
   app
   >
   <v-list dense>
-    <template v-for="(item, i) in drawerItems">
-      <v-list-tile
-      :key="i"
-      @click="navigateTo(item.path)"
-      >
-      <v-list-tile-action>
+    <v-list-item v-for="(item, i) in drawerItems" @click="navigateTo(item.path)">
+      <v-list-item-icon>
         <v-icon>{{ item.icon }}</v-icon>
-      </v-list-tile-action>
-      <v-list-tile-content>
-        <v-list-tile-title class="grey--text">
-          {{ $t(item.text) }}
-        </v-list-tile-title>
-      </v-list-tile-content>
-    </v-list-tile>
-  </template>
+      </v-list-item-icon>
+
+      <v-list-item-content>
+        <v-list-item-title>{{ $t(item.text) }}</v-list-item-title>
+      </v-list-item-content>
+    </v-list-item>
   </v-list>
-  </v-navigation-drawer>
+</v-navigation-drawer>
 </template>
 
 <script lang="ts">
@@ -31,6 +24,7 @@ import { Component, Vue } from 'vue-property-decorator';
 import { State } from 'vuex-class';
 import { LAYOUT_MODULE } from '@/store/constants/layout';
 import { DrawerItem } from '@/interfaces/drawer-item';
+import { ROOT_PATH, RECIPES_PATH, TAGS_PATH } from '@/router';
 
 @Component({
   name: 'navigation-bar',
@@ -43,17 +37,17 @@ export default class NavigationBar extends Vue {
   public drawerItems: DrawerItem[] = [
     {
       text: 'navigation.home',
-      path: '/',
+      path: ROOT_PATH,
       icon: 'home',
     },
     {
       text: 'navigation.recipes',
-      path: '/recipes',
+      path: RECIPES_PATH,
       icon: 'book',
     },
     {
       text: 'navigation.tags',
-      path: '/tags',
+      path: TAGS_PATH,
       icon: 'bookmark',
     },
   ];

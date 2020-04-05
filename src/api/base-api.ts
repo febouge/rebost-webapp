@@ -2,7 +2,6 @@ import axios from 'axios';
 import { AxiosInstance, AxiosPromise } from 'axios';
 
 export default class BaseApi {
-
   private axiosInstance: AxiosInstance = axios.create({
     baseURL: 'http://localhost:5000/',
     timeout: 10000,

@@ -1,15 +1,13 @@
 <template>
-  <div id="app">
-    <v-app>
-      <navigation-bar></navigation-bar>
-      <rebost-header></rebost-header>
-      <v-content>
-        <v-container fluid>
-          <router-view></router-view>
-        </v-container>
-      </v-content>
-    </v-app>
-  </div>
+<v-app id="app">
+  <rebost-header></rebost-header>
+  <navigation-bar></navigation-bar>
+  <v-content>
+    <v-container fluid>
+      <router-view></router-view>
+    </v-container>
+  </v-content>
+</v-app>
 </template>
 
 <script lang="ts">

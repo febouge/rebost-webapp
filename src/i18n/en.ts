@@ -9,9 +9,13 @@ export const enMessages = {
     add: 'Add',
     save: 'Save',
     delete: 'Delete',
+    search: 'Search',
   },
   tags: {
     title: 'Tags',
     addTag: 'Add tag',
+  },
+  search: {
+    title: 'Search',
   },
 };

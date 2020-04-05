@@ -1,7 +1,6 @@
 <template>
 <div>
   <h2>{{ $t('navigation.tags')}}</h2>
-  <v-btn @click="findTags">Load</v-btn>
   <v-container>
     <v-layout row>
       <v-flex xs10>
@@ -72,10 +71,12 @@ export default class TagsMain extends Vue {
   ];
 
   public newTag() {
-    this.createTag({
-      name: this.addTagText,
-    });
-    this.addTagText = '';
+    if (this.addTagText !== '') {
+      this.createTag({
+        name: this.addTagText,
+      });
+      this.addTagText = '';
+    }
   }
 }
 </script>

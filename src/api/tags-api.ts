@@ -4,7 +4,6 @@ import { AxiosPromise } from 'axios';
 import { BaseCrud } from './interfaces/base-crud';
 
 export default class TagsApi extends BaseApi implements BaseCrud<Tag> {
-
   private tagsEndpoint = 'tags/';
 
   public findById(id: number): AxiosPromise<Tag> {

@@ -3,7 +3,6 @@ import { Recipe } from './interfaces/recipe';
 import { AxiosPromise } from 'axios';
 
 export default class RecipesApi extends BaseApi {
-
   private recipesEndpoint = 'recipes/';
 
   public findById(id: number): AxiosPromise<Recipe> {

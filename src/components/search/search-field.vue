@@ -34,12 +34,10 @@ export default class SearchField extends Vue {
   public search(): void {
     if (!this.searchText) {
       return
-    };
-    console.log('enter on search');
+    }
     if (this.$route.path !== SEARCH_PATH) {
       this.$router.push(SEARCH_PATH);
     }
-    // Call action search
   }
 }
 </script>
